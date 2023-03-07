@@ -1,18 +1,33 @@
 <script>
 
     const runawayMix = 'runawarRemix.mp3'
+    const glowURL = 'glow.png'
+    const glowRURL = 'glowR.png'
+    let rosie
+    
+    function createFire(x, y) {
+    const fly = document.createElement('img')
+    fly.src = glowURL + '#' + Math.random()
+    fly.style.position = 'absolute'
+    fly.style.width = 666
+    fly.style.left = x + 'px'
+    fly.style.top = y + 'px'
+    return fly
+  }
   
     function setup() {
-    const text = document.createElement("div")
-    const content = document.createTextNode("mix-me by clicking on the flies")
-    text.appendChild(content)
-		const currentDiv = document.getElementById("div1");
-  	document.body.insertBefore(text, currentDiv)
-    text.style.position = 'absolute'
-    text.style.top = 55
-    text.style.left = innerWidth / 7
-  	text.style.color = '#213340'
-  	text.style.fontSize = 22
+    document.body.style.backgroundColor = '#070805'
+    
+    rosie = createFire(100, 100)
+    document.body.appendChild(rosie)
+      
+    const runaway = document.createElement("AUDIO")
+
+    document.appendChild(runaway)
+  }
+  
+  function playRosie() {
+   
   }
 
   window.addEventListener('load', setup)

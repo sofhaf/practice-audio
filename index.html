@@ -1,0 +1,20 @@
+<script>
+
+    const runawayMix = 'runawarRemix.mp3'
+  
+    function setup() {
+    const text = document.createElement("div")
+    const content = document.createTextNode("mix-me by clicking on the flies")
+    text.appendChild(content)
+		const currentDiv = document.getElementById("div1");
+  	document.body.insertBefore(text, currentDiv)
+    text.style.position = 'absolute'
+    text.style.top = 55
+    text.style.left = innerWidth / 7
+  	text.style.color = '#213340'
+  	text.style.fontSize = 22
+  }
+
+  window.addEventListener('load', setup)
+ 
+</script>

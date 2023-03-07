@@ -22,12 +22,14 @@
     document.body.appendChild(rosie)
       
     const runaway = document.createElement("AUDIO")
-
-    document.appendChild(runaway)
+		runaway.src = runawayMix // idk if this is right! You left here
+    document.appendChild(runaway) //first add source to the document!
   }
   
   function playRosie() {
-   
+   //on click, image source changes. When src image is glow then pause, when img
+  //src is glowR then play. Also add to setup or a function that goes into setup,
+    //...add the backgroun audio into setup!
   }
 
   window.addEventListener('load', setup)
